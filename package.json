@@ -1,21 +1,31 @@
-
 {
-  "name": "azlyricsman",
-  "version": "0.1.4",
+  "name": "js-azlyrics",
+  "version": "0.2.0",
   "description": "Gets the lyrics, title, and author off of what song you provide.",
   "keywords": [
     "lyrics",
     "azlyrics"
   ],
-  "main": "index.js",
-  "author": "DevinThePancake",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-cli"
+  },
+  "main": "out/bundle.js",
+  "author": "benkaiser",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DevinThePancake/azlyricsman.git"
+    "url": "https://github.com/benkaiser/js-azlyrics.git"
   },
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^0.22.0",
-    "request": "^2.83.0"
+    "node-html-parser": "^1.1.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/runtime": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
   }
 }
