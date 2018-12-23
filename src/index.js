@@ -39,5 +39,3 @@ export default class Lyrics {
       });
   }
 }
-
-window.AZLyrics = Lyrics;

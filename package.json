@@ -1,6 +1,6 @@
 {
   "name": "js-azlyrics",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Gets the lyrics, title, and author off of what song you provide.",
   "keywords": [
     "lyrics",
