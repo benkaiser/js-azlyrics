@@ -1,14 +1,22 @@
-# azlyricsman [![Build Status](https://travis-ci.org/DevinThePancake/azlyricsman.svg?branch=master)](https://travis-ci.org/DevinThePancake/azlyricsman) [![Dependency Status](https://img.shields.io/david/devinthepancake/azlyricsman.svg?style=flat-square)](https://david-dm.org/devinthepancake/azlyricsman)
+# js-azlyrics
 
-[![npm package](https://nodei.co/npm/azlyricsman.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/azlyricsman/)
+[![NPM](https://nodei.co/npm/js-azlyrics.png)](https://nodei.co/npm/js-azlyrics/)
 
-This uses [azlyrics](https://azlyrics.com/) and gets the song of your choice and returns a promise with song lyrics, title, and song
+This uses [azlyrics](https://azlyrics.com/) and gets the song of your choice and returns a promise with song lyrics, title, and song.
+
+This is intended for browser usage and depends on fetch. You can add a [polyfill](https://www.npmjs.com/package/whatwg-fetch) if you don't have it.
 
 Usage:
 ```js
-const lyrics = require('azlyricsman');
+import azlyrics from 'js-azlyrics';
 
-const get = lyrics.get('Meme Machine').then((song) => {
+// optional, used for your own CORS proxy endpoint
+const options = {
+  searchEndpoint: '/azlyricssearch',
+  mainEndpoint: '/azlyrics'
+};
+
+azlyrics.get('Allday You Always Know The DJ', options).then((song) => {
    console.log(`Lyrics for ${song.song} by ${song.artist}:\n${song.lyrics}`);
 });
 ```
