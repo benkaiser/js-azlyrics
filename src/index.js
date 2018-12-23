@@ -9,8 +9,8 @@ export default class Lyrics {
     * @returns {Promise<String>} The lyrics the API provided.
     **/
   static get(query, options) {
-    const searchEndpoint = options.searchEndpoint || 'https://crossorigin.me/https://search.azlyrics.com';
-    const mainEndpoint = options.mainEndpoint || 'https://crossorigin.me/https://www.azlyrics.com/';
+    const searchEndpoint = options && options.searchEndpoint || 'https://crossorigin.me/https://search.azlyrics.com';
+    const mainEndpoint = options && options.mainEndpoint || 'https://crossorigin.me/https://www.azlyrics.com/';
     return fetch(`${searchEndpoint}/search.php?q=${query.replace(/\s/g, "+")}`)
       .then(response => response.text())
       .then(responseBody => {

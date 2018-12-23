@@ -6,7 +6,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'out'),
     filename: 'bundle.js',
-    library: 'JSAZLyrics'
+    library: 'JSAZLyrics',
+    libraryTarget:'umd'
   },
   module: {
     rules: [
